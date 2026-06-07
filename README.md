@@ -18,7 +18,7 @@ Understanding how the web browser takes in HTML to give a visual display on the 
 (2)
 QUIC is impoetajt no because it’s the modern protocol used by the HTTP/3 and is built on UDP unlike the earlier days where we had HTTP/1 and HTTP/2, where they make use of TCP which is slower and a delay in process of a data disrupts other data eg. A slow internet connection or switching of internet. This is where QUIC comes in because it take out disadvantages of the previously used TCP, Especially where information needs to arrive early.
 
-(3) https://registration.waecdirect.org/# After my inspection, i noticed the site relies heavily on generic containers, which may make navigation less clear for assistive technologies, while also inspecting, i observed there was a link that had no function and on click never redirected and the while i tab, i didnt notice anything over there.
+(3) https://registration.waecdirect.org/# After my inspection, i noticed the site relies on generic containers, which may make navigation less clear for assistive technologies, while also inspecting, i observed there was a link that had no action and on click never redirected and the while i tab, i didnt notice anything over there, like the focus didnt move through the link.
 
 PRODUCT THINKING:
 (1)
@@ -47,6 +47,10 @@ So while semantic html first, Arial label is where it’s only needed, eg.
  <div aria-label="Submit Form"> Submit </div>, here the aria label doesn’t make it an actual button instead - <button> Submit </button>, it’s recognized as a button immediately.
 
 ACCESSIBILITY REFLECTION:
+(1)
+https://www.nairaland.com/
+I pressed Tab multiple times and i was able to move through the navigation menu, major links and the website in general. The order generally followed the visual layout of the page.
+The email field when you want to register had a visible label above the input, the focus was good on the button which points out they are clickable for search, submit and even the links / text click through to another page.
 
 PRODUCT THINKING:
 
@@ -94,12 +98,37 @@ In simple terms native <select> should be used when with simple list that has to
 
 ENGINEERING PRACTICE:
 (1)
+When working with an accessible password input one should focus on including a password field with a visible label, a show or hide password toggle, a password strength meter, and a requirements checklist.
+
+The password field should indicate the password label, a toggle Show and Hide button should be next to the field so users can verify what they have typed as most website mostly show and eye which indicate a see through, The button should be keyboard accessible and include an ARIA label.
+As the user types or increase the input the password strength meter should get update as the user increases the password value or character and the meter displays indication such as Weak, Medium, or Strong. For screen reader users, the strength status should be announced.
+A requirements checklist should be displayed below the field and update in real time:
+
+(===) At least 8 characters
+(===) Contains uppercase letter
+x Contains number
+x Contains symbol
+
+As the password improves, the checklist in particular show which requirements have been met by the user.
 
 
                                         Class 05 (The CSS Engine — Box Model & Specificity)
 
 THEORY:
 (1)
++----------------------+
+|       Margin         |
+|  +----------------+  |
+|  |    Border      |  |
+|  | +------------+ |  |
+|  | |  Padding   | |  |
+|  | | +--------+ | |  |
+|  | | |Content | | |  |
+|  | | +--------+ | |  |
+|  | +------------+ |  |
+|  +----------------+  |
++----------------------+
+
 if we have two adjacent divs both with the margin-bottom: 20px and margin-top: 30px, the space between them will still be 30px, for example, when we play cards there is a type of game play where the lowest number wins, but for css, the highest number wins, logically one will think, if you add both, it ends up with minus 20px from the 30px to have 10px but since the highest number wins, a margin of 30px is given in between.
 
 (2)
@@ -131,6 +160,25 @@ Padding = 10px, the total width becomes 210px and that is a problem but now that
 It’s like caging the content within a certain box.
 
 (2)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-[200px] p-[30px] border-[5px] border-black box-content">
+  Content Box
+</div>
+
+<div class="w-[200px] p-[30px] border-[5px] border-black box-border mt-4">
+  Border Box
+</div>
+</body>
+</html> 
+From the tailwind css above, on check the container with the border box remains 200px while the one with the content box increased because other values are added to the content and playing around i was able to know that for the border box to be on the same width with the content box it needs to be 270px width.
 
                                                         Class 06 (Flexbox Mastery)
 THEORY:
@@ -148,6 +196,45 @@ Because the div container for the child will remains 50px instead of stretching 
 
 ENGINEERING THINKING:
 (1)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 6</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="flex items-center py-4 px-8">
+    <div class="flex-1">
+        <a href="/" class="font-bold text-xl">
+            Logo
+        </a>
+    </div>
+    <nav class="flex justify-center">
+        <ul class="flex gap-8">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="flex-1 flex justify-end ml-2">
+        <button class="px-6 py-2 border rounded-full">
+            Sign In
+        </button>
+    </div>
+</header>
+    <main class="px-8 py-10">
+        <h1 class="text-4xl font-bold">
+            ⚙️ Engineering Thinking
+        </h1>
+    </main>
+</body>
+</html>
+from the tailwind code above, i started with putting the header inside the  body as a best practice and been semantic, proceeded to putting the logo in a div container, which the div contain was flex by one to take up any space left and then created a nav class to include 5 nav items, with a flex of justify centered to keep it centered  between the logo and the button for the sign in, then gave a gap of 8 between each element within the nav, proceeded to setting the flex box to justify end to place the sign in to the end of the header container and flex by 1 to also take up space left so that way both left and right are covered by the flex by 1 and the nav is perfectly in the middle.
 (2)
 
                                                     Class 07 (CSS Grid & Layout Complexity)
