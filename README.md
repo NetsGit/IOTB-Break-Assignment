@@ -31,6 +31,7 @@ ENGINEERING BEST PRACTICE:
 (1)
 I disagree and you can’t use div everywhere, and those are the advantages of having semantic tags / elements. In terms of accessing, excessive using of div which just acts as a generic container and would be a disadvantage to screen users, because they won’t know which area is which, be it navigation or going to a particular content, eg the main content. On the part of seo, the search engine is confused because it doesn’t give a specific direction and which lead to bad crawling and poor index and lastly for maintainability and developer collaboration, div everywhere means the code is hard to maintain with no purpose of each section that also leads to poor collaboration and less understanding of layout, increasing the product finish time.
 
+
                                                 Class 02 (Typography & Information Hierarchy)
 THEORY:
 (1)
@@ -74,15 +75,15 @@ Autocomplete, enable suggestion before typing what you wanna type, I have experi
 
 Working with common values, 
 
-1. Email: (autocomplete="email") you can use it during login form or registration forms 
+1.Email: (autocomplete="email") you can use it during login form or registration forms 
 
-2. ⁠Street address: (autocomplete="street-address") to easily fill out address be it for shipping or delivery 
+2.⁠Street address: (autocomplete="street-address") to easily fill out address be it for shipping or delivery 
 
-3. ⁠Current password: (autocomplete="current-password") most time one mightnt even know their current password but that helps the user to Autocomplete it 
+3.⁠Current password: (autocomplete="current-password") most time one mightnt even know their current password but that helps the user to Autocomplete it 
 
-4. Name: (autocomplete="name") while filing forms of first name and last name fields
+4.Name: (autocomplete="name") while filing forms of first name and last name fields
 
-5. Telephone: (autocomplete="tel") to fill up forms of phone number field
+5.Telephone: (autocomplete="tel") to fill up forms of phone number field
 
 PRODUCT THINKING:
 (1)
