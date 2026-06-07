@@ -207,26 +207,26 @@ ENGINEERING THINKING:
 
 <body>
     <header class="flex items-center py-4 px-8">
-    <div class="flex-1">
-        <a href="/" class="font-bold text-xl">
+        <div class="flex-1">
+            <a href="/" class="font-bold text-xl">
             Logo
-        </a>
-    </div>
-    <nav class="flex justify-center">
-        <ul class="flex gap-8">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="flex-1 flex justify-end ml-2">
-        <button class="px-6 py-2 border rounded-full">
+            </a>
+        </div>
+        <nav class="flex justify-center">
+            <ul class="flex gap-8">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="flex-1 flex justify-end ml-2">
+            <button class="px-6 py-2 border rounded-full">
             Sign In
-        </button>
-    </div>
-</header>
+            </button>
+        </div>
+    </header>
     <main class="px-8 py-10">
         <h1 class="text-4xl font-bold">
             ⚙️ Engineering Thinking
@@ -236,6 +236,81 @@ ENGINEERING THINKING:
 </html>
 from the tailwind code above, i started with putting the header inside the  body as a best practice and been semantic, proceeded to putting the logo in a div container, which the div contain was flex by one to take up any space left and then created a nav class to include 5 nav items, with a flex of justify centered to keep it centered  between the logo and the button for the sign in, then gave a gap of 8 between each element within the nav, proceeded to setting the flex box to justify end to place the sign in to the end of the header container and flex by 1 to also take up space left so that way both left and right are covered by the flex by 1 and the nav is perfectly in the middle.
 (2)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Nav</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="grid md:grid-cols-4 md:grid-rows-2 min-h-screen">
+    <aside class="p-4">
+        <svg class="w-10 h-10 fill-black" fill="#000000" viewBox="0 0 32 32" id="Camada_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"></path> <path d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"></path> <path d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"></path> </g> </g></svg>
+        <div class="flex flex-col gap-6 mt-28">
+        <svg class="w-10 h-10 fill-black" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1 6V15H6V11C6 9.89543 6.89543 9 8 9C9.10457 9 10 9.89543 10 11V15H15V6L8 0L1 6Z" fill="#000000"></path> </g></svg>
+        <svg class="w-10 h-10 fill-black" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-camera-reels"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"></path> <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"></path> <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path> </g></svg>
+        <svg class="w-10 h-10 fill-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 13.5V9M15 9H10.5M15 9L9.00019 14.9999M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        <svg class="w-10 h-10 fill-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        <svg class="w-10 h-10 fill-black" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M20.5,4.609A5.811,5.811,0,0,0,16,2.5a5.75,5.75,0,0,0-4,1.455A5.75,5.75,0,0,0,8,2.5,5.811,5.811,0,0,0,3.5,4.609c-.953,1.156-1.95,3.249-1.289,6.66,1.055,5.447,8.966,9.917,9.3,10.1a1,1,0,0,0,.974,0c.336-.187,8.247-4.657,9.3-10.1C22.45,7.858,21.453,5.765,20.5,4.609Zm-.674,6.28C19.08,14.74,13.658,18.322,12,19.34c-2.336-1.41-7.142-4.95-7.821-8.451-.513-2.646.189-4.183.869-5.007A3.819,3.819,0,0,1,8,4.5a3.493,3.493,0,0,1,3.115,1.469,1.005,1.005,0,0,0,1.76.011A3.489,3.489,0,0,1,16,4.5a3.819,3.819,0,0,1,2.959,1.382C19.637,6.706,20.339,8.243,19.826,10.889Z"></path></g></svg>
+        <svg class="w-10 h-10 fill-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M12 4V20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        <svg class="w-10 h-10 fill-black" fill="#0d0c0c" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="stats" class="icon glyph" stroke="#0d0c0c"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#080808" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"><path d="M20,2H4A2,2,0,0,0,2,4V20a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V4A2,2,0,0,0,20,2ZM9,17a1,1,0,0,1-2,0V15a1,1,0,0,1,2,0Zm4,0a1,1,0,0,1-2,0V11a1,1,0,0,1,2,0Zm4,0a1,1,0,0,1-2,0V7a1,1,0,0,1,2,0Z"></path></g></svg>
+        </div>
+    </aside>
+    <main class="flex justify-center gap-4">
+        <figure class="text-center m-0">
+            <div class="w-[75px] h-[75px] p-1 rounded-full bg-gradient-to-br from-yellow-400 via-red-500 to-pink-600">
+                <img src="./WhatsApp Image 2026-04-16 at 7.59.54 AM.jpeg"
+                     alt=""
+                     class="w-[67px] h-[67px] rounded-full border-[3px] border-white object-cover">
+            </div>
+            <figcaption>Nifemi</figcaption>
+        </figure>
+        <figure class="text-center m-0">
+            <div class="w-[75px] h-[75px] p-1 rounded-full bg-gradient-to-br from-yellow-400 via-red-500 to-pink-600">
+                <img src="./WhatsApp Image 2026-04-16 at 7.59.55 AM.jpeg"
+                     alt=""
+                     class="w-[67px] h-[67px] rounded-full border-[3px] border-white object-cover">
+            </div>
+            <figcaption>Mary</figcaption>
+        </figure>
+        <figure class="text-center m-0">
+            <div class="w-[75px] h-[75px] p-1 rounded-full bg-gradient-to-br from-yellow-400 via-red-500 to-pink-600">
+                <img src="./WhatsApp Image 2026-04-16 at 7.59.56 AM.jpeg"
+                     alt=""
+                     class="w-[67px] h-[67px] rounded-full border-[3px] border-white object-cover">
+            </div>
+            <figcaption>Toyosi</figcaption>
+        </figure>
+        <figure class="text-center m-0">
+            <div class="w-[75px] h-[75px] p-1 rounded-full bg-gradient-to-br from-yellow-400 via-red-500 to-pink-600">
+                <img src="./WhatsApp Image 2026-04-16 at 7.59.58 AM.jpeg"
+                     alt=""
+                     class="w-[67px] h-[67px] rounded-full border-[3px] border-white object-cover">
+            </div>
+            <figcaption>Nets</figcaption>
+        </figure>
+        <figure class="text-center m-0">
+            <div class="w-[75px] h-[75px] p-1 rounded-full bg-gradient-to-br from-yellow-400 via-red-500 to-pink-600">
+                <img src="./WhatsApp Image 2026-04-16 at 7.59.59 AM.jpeg"
+                     alt=""
+                     class="w-[67px] h-[67px] rounded-full border-[3px] border-white object-cover">
+            </div>
+            <figcaption>RegalJay</figcaption>
+        </figure>
+        <figure class="text-center m-0">
+            <div class="w-[75px] h-[75px] p-1 rounded-full bg-gradient-to-br from-yellow-400 via-red-500 to-pink-600">
+                <img src="./WhatsApp Image 2026-04-16 at 8.00.00 AM.jpeg"
+                     alt=""
+                     class="w-[67px] h-[67px] rounded-full border-[3px] border-white object-cover">
+            </div>
+            <figcaption>Tunde</figcaption>
+        </figure>
+
+    </main>
+</body>
+</html>
+currently working on the code but due to submission time i dont think i can meet up, i would love to see how it goes, i combined our previously done instagram nav with the current one using tailwind css
 
                                                     Class 07 (CSS Grid & Layout Complexity)
 THEORY:
