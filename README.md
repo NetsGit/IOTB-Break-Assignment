@@ -365,3 +365,19 @@ So basically let and var can be reassigned, while const and let can only be seen
 (2)
 Technically, these are hoisted, but they are not initialized. Trying to access them before the actual line of declaration throws a ReferenceError. This uninitialized period is known as the Temporal Dead Zone (TDZ).
 Temporal Dead Zone is when you are trying to access a let or const variables before declarations, that is why we need to declare first if not, we will get a reference error and Temporal Dead Zone  exists to prevent bugs without Temporal Dead Zone, you won’t get a hold of mistakes early.
+
+                                                            Self-Assessment 
+
+Before this break, I knew…
+The Web Ecosystem, Flexbox, Tailwind fundamental 
+
+During this break, I learned…
+Advanced Tailwind & Responsive , Tailwind CSS Fundamentals, CSS Grid & Layout Complexity
+
+I'm still confused about…
+Control Flow & Comparison, DOM Manipulation & Events, Async/Await & Fetch API
+My growth areas…
+Advanced Tailwind & Responsive , Tailwind CSS Fundamentals, CSS Grid & Layout Complexity
+
+One thing I'll do differently in the next project…
+work more on my timing and go more into the zone of learning.
