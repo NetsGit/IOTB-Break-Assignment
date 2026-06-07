@@ -18,7 +18,7 @@ Understanding how the web browser takes in HTML to give a visual display on the 
 (2)
 QUIC is impoetajt no because it’s the modern protocol used by the HTTP/3 and is built on UDP unlike the earlier days where we had HTTP/1 and HTTP/2, where they make use of TCP which is slower and a delay in process of a data disrupts other data eg. A slow internet connection or switching of internet. This is where QUIC comes in because it take out disadvantages of the previously used TCP, Especially where information needs to arrive early.
 
-(3)
+(3) https://registration.waecdirect.org/# After my inspection, i noticed the site relies heavily on generic containers, which may make navigation less clear for assistive technologies, while also inspecting, i observed there was a link that had no function and on click never redirected and the while i tab, i didnt notice anything over there.
 
 PRODUCT THINKING:
 (1)
@@ -90,12 +90,14 @@ PRODUCT THINKING:
 How to handle it gracefully is by applying progress saving, I remember when I was filling an application form then, I mistakenly refresh and I was like, I can’t imagine filling again, to my surprised it was saved, so that is a good feature a form should have, save progress automatically. Then for validation strategy and error messaging would be validating each step, making sure that user don’t skip steps by letting by letting user know it’s required and for the error messaging it’s letting user know their progress has been saved due to maybe internet connection or refresh and they can continue from where they stopped, although I didn’t experience that during the job application then.
 
 (2)
-In simple terms native <select> should be used when with simple list that has to do with simple pick / select because it’s faster to build and and easy to understand eg. When selecting gender (Male or Female) on the other hand when you need a complex list, where you need to select more than one option or even search in the list, eg search for a particular country where you have a lot of country listed, it’s best to use the custom drop down
+In simple terms native <select> should be used when with simple list that has to do with simple pick / select because it’s faster to build and and easy to understand eg. When selecting gender (Male or Female) on the other hand when you need a complex list, where you need to select more than one option or even search in the list, eg search for a particular country where you have a lot of country listed, it’s best to use the custom drop down.
 
 ENGINEERING PRACTICE:
 (1)
 
+
                                         Class 05 (The CSS Engine — Box Model & Specificity)
+
 THEORY:
 (1)
 if we have two adjacent divs both with the margin-bottom: 20px and margin-top: 30px, the space between them will still be 30px, for example, when we play cards there is a type of game play where the lowest number wins, but for css, the highest number wins, logically one will think, if you add both, it ends up with minus 20px from the 30px to have 10px but since the highest number wins, a margin of 30px is given in between.
@@ -108,7 +110,6 @@ Firstly a cascade is a steep, often small waterfall or a series of small falls, 
 Eg. p {
   color: blue;
 }
-
 p {
   color: red;
 }
@@ -148,12 +149,12 @@ Because the div container for the child will remains 50px instead of stretching 
 ENGINEERING THINKING:
 (1)
 (2)
+
                                                     Class 07 (CSS Grid & Layout Complexity)
 THEORY:
 (1)
 Firstly Flexbox is one direction and then grid is two direction, meaning flexbox works either row or column but grid works both row and column, so grid is more flexible when working.
 Scenario 1: A Chess layout, Scenario 2: A Magazine website, Scenario 3: photo gallery.
-
 When it comes to all these scenarios, flexbox is messy and grid has more control over both the roles and the columns.
 
 (2)
@@ -163,26 +164,25 @@ ENGINEERING THINKING:
 (1)
 (2)
 
+
                                                Class 08 (Tailwind CSS Fundamentals)
 THEORY:
 (1)
 The “utility-first" philosophy, is all about having your class within your HTML element, why the Tailwind's creator chose the utility classes over semantic/component-based classes, is because the traditional semantic/component-based classes involves creating class, switching to css file, styling your html element there. 
-
 That traditional method takes time and the “utility-first" philosophy eradicates that, the utility classes enables faster development and remove stress of thinking about class names back to back.
 
 (2)
 JIT (Just-In-Time) compiler help tailwind css to work with just what you have in your project, the class you are working in the html element while everything else is ignored. This leads to faster development and small css file which result in faster loading.
 
-
 PRODCUT THINKING:
 (1)
 I remember when a course mate of mine will complain about tailwind and says vanilla is better and my usual response is.
-
 Technology is all about evolving, newer things or process will be created and with tailwind CSS everything is made easier, there is consistency in values, no more inventing of different names.
 It’s easy to maintainable, you don’t need to be switching tabs, going far from home. It’s also very readable because you can easily spot why you are looking for eg. p-20. All the switching of tabs, reduced performance and tailwind saves you all that stress and time waste.
 
 ENGINEERING THINKING:
 (1)
+
 
                                             Class 09 (Advanced Tailwind & Responsive Design)
 THEORY:
@@ -195,15 +195,11 @@ In tailwind arbitrary values are custom values, so let’s say width = 123px but
 
 ENGINEERING  BEST PRACTICE:
 (1)
-Let: scope - block, hoisting - technically hoisted, reassignment - allowed
- 
+Let: scope - block, hoisting - technically hoisted, reassignment - allowed 
 Const: scope - block, hoisting - technically hoisted, reassignment - not allowed 
-
 Var: scope - function scoped, hoisting - hoisted, reassignment - allowed 
-
 So basically let and var can be reassigned, while const and let can only be seen and accessed while used between { }, let and constant are technically hoisted before they need to be defined before they can be accessed, unlike var.
 
 (2)
 Technically, these are hoisted, but they are not initialized. Trying to access them before the actual line of declaration throws a ReferenceError. This uninitialized period is known as the Temporal Dead Zone (TDZ).
-
 Temporal Dead Zone is when you are trying to access a let or const variables before declarations, that is why we need to declare first if not, we will get a reference error and Temporal Dead Zone  exists to prevent bugs without Temporal Dead Zone, you won’t get a hold of mistakes early.
